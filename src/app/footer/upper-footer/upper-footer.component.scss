@@ -1,0 +1,117 @@
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:#363B3E;
+    padding: 30px 60px;
+    color:#fff;
+
+    .news-letter{
+        #signup-heading{
+            font-weight: 100;
+            line-height: 38px;
+        }
+        #email{
+            padding: 15px;
+            font-size: 18px;
+            border: 2px solid #4C5358;
+            background-color:#363B3E;
+            color: #fff;
+            outline: none;
+            border-radius: 7px;
+            width: 310px;
+            transition: color 500ms ease,background-color 500ms ease,border 500ms ease;
+
+            &:focus{
+                color:#000;
+                background-color:#ddd;
+                border: 2px solid #ddd;
+            }
+        }
+        #signup{
+            width: 344px;
+            background-color: #2587B7;
+            color: #fff;
+            padding: 15px;
+            font-size: 20px;
+            outline: none;
+            border-radius: 7px;
+            border: 0px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    }
+    .categories{
+        width: 50%;
+        margin-left: 30px;
+
+        #categories-heading{
+            font-weight: 100;
+        }
+        .sections{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-size: 14px;
+
+            .section{
+                ul{
+                    margin: 0px;
+                    padding: 0px;
+                    li{
+                        list-style: none;
+                        margin: 15px 0px;
+                        a{
+                            color: #b4b4b4;
+                            text-decoration: none;
+                            &:hover{
+                                color: #dedede;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 890px) {
+    .news-letter{
+        #email{
+            width: 286px !important;
+        }
+        #signup{
+            width: 320px !important;
+        }
+    }
+}
+@media only screen and (max-width: 845px) {
+    footer{
+        justify-content: space-around;
+        text-align: center;
+        padding: 30px;
+        .categories{
+            margin-top: 22px;
+            width: 100%;
+            margin-left: 0;
+
+            .sections{
+                justify-content: space-evenly !important;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 450px) {
+    footer{
+        .section{
+            width: 50%;
+        }
+    }
+    .news-letter{
+        #email{
+            width: 260px !important;
+        }
+        #signup{
+            width: 294px !important;
+        }
+    }
+}
