@@ -1,13 +1,14 @@
+<!-- search section  -->
 <div class="search_wrapper">
    <h1 id="heading">Gif Search</h1>
-   <p id="q">...</p>
+   <p id="s">...</p>
    <form #searchForm="ngForm">
-        <input type="text" name="search" id="search" spellcheck="false" autocomplete="off" placeholder="What are you looking for?" ngModel>
+        <input type="text" name="search" id="search" spellcheck="false" autocomplete="off" placeholder="What are you looking for?" ngModel (keyup)="submitResult($event)">
         <select id="search_filter">
             <option value="show_all">Show All</option>
             <option value="trending">Trending</option>
         </select>
-        <a href="#q" id="search_btn" (click)="searchResult($event,searchForm.value)">
+        <a href="#s" id="search_btn" (click)="searchResult($event,searchForm.value)">
             <i class="fa fa-search" aria-hidden="true"></i>
         </a>
         <p id="error_msg" [hidden]="!err">Please enter something</p>
@@ -15,19 +16,25 @@
     <h2 id="search-info">You can search any gif with our search</h2>
     <p id="search-description">Everything you need for your creative projects, websites, banners, presentation, magazines and advertising.</p>
 </div>
-
+<!-- result section -->
 <div class="results">
     <div id="search_loader" [hidden]="!loader">
         <i aria-hidden="true" class="fa fa-spinner"></i>
         <p>Searching...</p>
     </div>
+    <div id="no_results" [hidden]="!noResults">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <p>No result found</p>
+    </div>
     <div class="result" [hidden]="loader" *ngFor="let result of results">
-        <img [src]="result.images.fixed_height_still.url">
+        <img [src]="result.images.fixed_height.url">
     </div>
     <div [hidden]="default_results" class="result">
         <img src="./assets/3.png">
         <img src="./assets/4.png">
         <img src="./assets/2.png">
+        <img src="./assets/4.png">
         <img src="./assets/1.png">
+        <img src="./assets/4.png">
     </div>
 </div>
