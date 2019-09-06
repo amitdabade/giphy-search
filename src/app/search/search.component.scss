@@ -52,7 +52,7 @@
         color:#fff;
         font-size: 18px;
     }
-    #q{
+    #s{
         visibility: hidden;
         margin: 0.1em;
     }
@@ -63,12 +63,14 @@
     justify-content: space-around;
     text-align: center;
     min-height: 247px;
-    
+
     .result{
         padding: 15px;
+        img{
+            max-width: 290px;
+        }
     }
-
-    #search_loader{
+    #search_loader,#no_results{
         margin: 100px auto;
         font-size: 42px;
         color: #3d3d3d;
@@ -78,7 +80,7 @@
     }
 }
 
-
+// Media query for responsiveness of search section
 @media only screen and (max-width: 640px) {
     #search{
         width: 45% !important;
