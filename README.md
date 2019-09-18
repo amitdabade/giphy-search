@@ -1,6 +1,6 @@
 # Giphy
 
-`Search GIF from giphy API`
+Search GIF from giphy API
 
 ## Project setup
 
