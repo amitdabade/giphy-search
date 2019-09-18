@@ -12,7 +12,7 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {}
   
   public getGiphy(q){
-    this.apiURL = `http://api.giphy.com/v1/gifs/search?q=${q}&api_key=${this.apiKey}&limit=${this.limit}`;
+    this.apiURL = `https://api.giphy.com/v1/gifs/search?q=${q}&api_key=${this.apiKey}&limit=${this.limit}`;
     return this.httpClient.get(this.apiURL);
   }
 
